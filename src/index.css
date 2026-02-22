@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  /* Custom Colors from your images */
+  --color-sweet-pink: #F1808F;
+  --color-sweet-blue: #71D4F4;
+  --color-sweet-green: #A3E635;
+  --color-dark-text: #4B4B4B;
+
+  /* Custom Border Radius for that soft Montessori look */
+  --radius-4xl: 2rem;
+  --radius-5xl: 3.5rem;
+
+  /* Fonts */
+  --font-myanmar: "Noto Sans Myanmar", sans-serif;
+  --font-english: "Inter", "system-ui", sans-serif;
+
+
+  --background-message-gradient: linear-gradient(135deg, #71D4F4 0%, #B8AEF2 100%);
+  
+}
+
+@layer base {
+  body {
+    /* @apply font-english text-dark-text; */
+    /* Ensure Myanmar text renders correctly */
+    line-height: 1.6; 
+  }
+}
