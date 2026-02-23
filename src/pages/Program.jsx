@@ -54,7 +54,7 @@ const Program = () => {
             {/* The First Oval Image */}
             <div className="w-32 md:w-64 lg:w-[35rem] h-16 md:h-32 lg:h-[12rem] rounded-full overflow-hidden border-[3px] border-black inline-block mt-2 lg:mt-8 shadow-lg">
               <img 
-                src="/images/program-oval-1.jpg" 
+                src="/images/sw1.jpg" 
                 alt="Children playing" 
                 className="w-full h-full object-cover"
               />
@@ -82,7 +82,7 @@ const Program = () => {
             {/* The Second Oval Image (School Bus/Field Trip) */}
             <div className="w-32 md:w-64 lg:w-[35rem] h-16 md:h-32 lg:h-[12rem] rounded-full overflow-hidden border-[3px] border-black inline-block mt-2 lg:mt-8 shadow-lg">
               <img 
-                src="/images/program-oval-2.jpg" 
+                src="/images/sw3.jpg" 
                 alt="School field trip" 
                 className="w-full h-full object-cover"
               />

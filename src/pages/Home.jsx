@@ -31,7 +31,7 @@ const Home = () => {
             {/* Masked Image Shape - Resized for mobile */}
             <div className="w-[280px] h-[280px] lg:w-[480px] lg:h-[420px] overflow-hidden rounded-t-[60px] lg:rounded-t-[100px] rounded-bl-[60px] lg:rounded-bl-[100px] rounded-br-[20px] lg:rounded-br-[30px] border-4 border-white shadow-xl">
               <img 
-                src="/images/logo.jpg" 
+                src="/images/swheader.png" 
                 alt="Kids at SweetPeas" 
                 className="w-full h-full object-cover"
               />
@@ -60,12 +60,12 @@ const Home = () => {
             
             {/* Circle Frame */}
             <div className="w-64 h-64 lg:w-80 lg:h-80 border-[3px] border-dark-text rounded-full overflow-hidden p-1.5 shadow-lg -rotate-2">
-              <img src="/images/gallery1.jpg" className="w-full h-full object-cover rounded-full" />
+              <img src="/images/gallery1.png" className="w-full h-full object-cover rounded-full" />
             </div>
 
             {/* Rounded Box Frame */}
             <div className="w-64 h-64 lg:w-80 lg:h-80 border-[3px] border-dark-text rounded-[50px] overflow-hidden p-1.5 shadow-lg">
-              <img src="/images/gallery2.jpg" className="w-full h-full object-cover rounded-[45px]" />
+              <img src="/images/gallery2.png" className="w-full h-full object-cover rounded-[45px]" />
             </div>
 
             {/* House Shape Frame */}
@@ -74,7 +74,7 @@ const Home = () => {
                    clipPath: 'polygon(50% 0%, 100% 20%, 100% 100%, 0 100%, 0% 20%)',
                    borderRadius: '24px' 
                  }}>
-              <img src="/images/gallery3.jpg" className="w-full h-full object-cover" />
+              <img src="/images/gallery3.png" className="w-full h-full object-cover" />
             </div>
 
           </div>
@@ -177,9 +177,9 @@ const Home = () => {
                   <div className="border-[3px] border-dark-text rounded-[50px] overflow-hidden p-2 bg-white shadow-md group-hover:shadow-xl transition-shadow duration-300">
                     <div className="aspect-square rounded-[40px] overflow-hidden">
                       <img 
-                        src={`/images/connection${num}.jpg`} 
+                        src={`/images/sw${num}.jpg`} 
                         alt="Student activities" 
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        className="w-full h-full object-cover transition-transform duration-500"
                       />
                     </div>
                   </div>
@@ -220,11 +220,11 @@ const Home = () => {
               <div className="w-full lg:w-1/2 relative group">
                 <div className="border-[12px] border-white/30 rounded-[60px] overflow-hidden shadow-2xl -rotate-9 group-hover:rotate-0 transition-transform duration-500">
                   <div className="relative aspect-[4/3]">
-                      <img src="/images/practical-life.jpg" alt="Practical Life" className="w-full h-full object-cover" />
+                      <img src="/images/practicallife.png" alt="Practical Life" className="w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                        <h3 className="text-5xl lg:text-7xl font-black text-white text-center leading-tight drop-shadow-xl uppercase italic">
+                        {/* <h3 className="text-5xl lg:text-7xl font-black text-white text-center leading-tight drop-shadow-xl uppercase italic">
                           Practical<br/>Life
-                        </h3>
+                        </h3> */}
                       </div>
                   </div>
                 </div>
