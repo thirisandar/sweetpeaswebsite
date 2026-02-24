@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -26,6 +26,9 @@ const About = () => {
     { title: "Child Centered", myanmar: "နည်းလမ်းကို အသုံးပြုပြီး သားသားမီးမီးတစ်ယောက်စီကို အထူးဂရုပြု ပြုစုပျိုးထောင်ပေးခြင်း။" },
   ];
 
+    const [showForm, setShowForm] = useState(false);
+  
+
   return (
     <div className="min-h-screen bg-white">
       {/* 1. We increase height to h-screen on mobile to ensure room for the big button */}
@@ -44,7 +47,7 @@ const About = () => {
 
         {/* 3. Navbar - Must be z-50 to stay on top */}
         <div className="relative z-50">
-          <Navbar isTransparent={true} />
+          <Navbar isTransparent={true} showForm={showForm} setShowForm={setShowForm} />
         </div>
 
         {/* 4. Content Area - We use flex-1 to fill the middle space */}
@@ -65,9 +68,9 @@ const About = () => {
             <div className="absolute inset-0 bg-[#FFD600] translate-x-2 translate-y-2 rounded-2xl transition-transform group-hover:translate-x-1 group-hover:translate-y-1"></div>
             
             {/* The Main Blue Button layer */}
-            <button className="relative bg-[#71D4F4] text-white px-6 lg:px-10 py-4 lg:py-4 rounded-2xl text-xl lg:text-3xl font-black uppercase tracking-widest shadow-2xl active:translate-x-1 active:translate-y-1 transition-all cursor-pointer border-none">
+            <a href="https://form.jotform.com/232234500679050"  target="_blank" rel="noopener noreferrer" className="relative bg-[#71D4F4] text-white px-6 lg:px-10 py-4 lg:py-4 rounded-2xl text-xl lg:text-3xl font-black uppercase tracking-widest shadow-2xl active:translate-x-1 active:translate-y-1 transition-all cursor-pointer border-none inline-block text-center">
               JOIN NOW
-            </button>
+            </a>
           </div>
           
           {/* Paper Plane Icon */}

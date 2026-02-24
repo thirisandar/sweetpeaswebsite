@@ -13,6 +13,8 @@ const Faq = () => {
   ];
 
   const [openIndex, setOpenIndex] = useState(0);
+  const [showForm, setShowForm] = useState(false);
+
 
   const faqData = [
     {
@@ -56,12 +58,14 @@ const Faq = () => {
   ];
 
 
+
+
   return (
     <div className="relative min-h-screen flex flex-col bg-white overflow-x-hidden">
       
       {/* --- HEADER SECTION --- */}
       <section className="relative min-h-[70vh] lg:min-h-screen flex flex-col bg-gradient-to-b from-[#81DDFB] to-[#ADF1FF] pb-20 lg:pb-40">
-        <Navbar isTransparent={true} />
+          <Navbar isTransparent={true} showForm={showForm} setShowForm={setShowForm} />
         <div className="pt-20"></div>
 
         <div className="container mx-auto px-6 pt-20 lg:pt-32 flex flex-col lg:flex-row items-center justify-between relative z-10">
@@ -81,9 +85,9 @@ const Faq = () => {
               Have questions? We have answers. Explore our frequently asked questions to learn more about our Montessori approach and community.
             </p>
 
-            <button className="relative mt-10 bg-[#81DDFB] border-4 border-white px-10 py-3 rounded-full text-2xl text-white font-black shadow-xl hover:bg-[#F1808F] transition-all z-50 cursor-pointer">
+            <a href="https://form.jotform.com/232234500679050" target="_blank" rel="noopener noreferrer" className="relative inline-block mt-10 bg-[#81DDFB] border-4 border-white px-10 py-3 rounded-full text-2xl text-white font-black shadow-xl hover:bg-[#F1808F] transition-all z-50 cursor-pointer text-center">
               Join
-            </button>
+            </a>
           </div>
 
           {/* Right Side: Hero Image */}

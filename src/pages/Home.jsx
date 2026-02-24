@@ -1,4 +1,4 @@
-import React,{useRef} from 'react';
+import React,{useRef, useState} from 'react';
 import Navbar from '../components/Navbar'; 
 import Footer from '../components/Footer'; 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -17,18 +17,18 @@ const Home = () => {
 
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+
+  const [showForm, setShowForm] = useState(false);
   return (
     <div className="min-h-screen bg-white">
       {/* Navbar sits at the top */}
-      <Navbar />
+      <Navbar isTransparent={true} showForm={showForm} setShowForm={setShowForm} />
 
       <main className="pt-20">
         {/* HERO SECTION - Mobile Optimized */}
         <section className="container mx-auto px-6 py-8 lg:py-12 flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-20">
           
-          {/* Image Container */}
           <div className="relative">
-            {/* Masked Image Shape - Resized for mobile */}
             <div className="w-[280px] h-[280px] lg:w-[480px] lg:h-[420px] overflow-hidden rounded-t-[60px] lg:rounded-t-[100px] rounded-bl-[60px] lg:rounded-bl-[100px] rounded-br-[20px] lg:rounded-br-[30px] border-4 border-white shadow-xl">
               <img 
                 src="/images/swheader.png" 
@@ -36,21 +36,17 @@ const Home = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            {/* The Green Puzzle Piece Shape */}
             <div className="absolute -bottom-4 -left-4 lg:-bottom-6 lg:-left-6 w-20 h-20 lg:w-28 h-28 bg-sweet-green rounded-3xl -z-10 rotate-12 shadow-sm"></div>
           </div>
 
-          {/* Text Content - Fixed for Mobile Visibility */}
           <div className="flex flex-col font-myanmar text-center lg:text-left">
-            {/* Line 1: Reduced size for mobile (text-3xl), massive for desktop (lg:text-[7rem]) */}
-            <h1 className="text-3xl md:text-5xl lg:text-[7rem] font-bold text-dark-text leading-relaxed lg:leading-tight">
-              ကလေးပျော်မှ
-            </h1>
-            
-            {/* Line 2: Scaled for mobile (text-4xl) to maintain the "big" feel without breaking */}
-            <h1 className="text-4xl md:text-6xl lg:text-[9rem] font-bold text-sweet-pink leading-tight lg:leading-[1]">
-              ကျောင်းထားပါ
-            </h1>
+              <h1 className="text-4xl md:text-5xl lg:text-[7rem] font-bold text-dark-text leading-[1.4] lg:leading-loose mb-2 lg:mb-0">
+                ကလေးပျော်မှ
+              </h1>
+              
+              <h1 className="text-5xl md:text-6xl lg:text-[9rem] font-bold text-sweet-pink leading-[1.5] lg:leading-[1.3]">
+                ကျောင်းထားပါ
+              </h1>
           </div>
         </section>  
 
@@ -383,7 +379,7 @@ const Home = () => {
           </div>
         </section>
 
-                {/* Add this at the very bottom of your Curriculum <section> */}
+          {/* Add this at the very bottom of your Curriculum <section> */}
           <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] translate-y-1">
               <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-[60px] fill-[#E0F7FF]">
                   <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C49.49,24.19,152.09,42.7,321.39,56.44Z"></path>
@@ -443,9 +439,7 @@ const Home = () => {
           <p className="text-lg lg:text-xl font-bold text-slate-500 uppercase mb-10 max-w-2xl mx-auto">
             Visit our campus today and see how we create a brighter future for your little ones.
           </p>
-          <button className="px-5 py-3 bg-sweet-blue text-white font-black cursor-pointer rounded-full text-xl shadow-[0_15px_30px_rgba(113,212,244,0.4)] hover:bg-sweet-pink hover:shadow-[0_15px_30px_rgba(241,128,143,0.4)] transition-all duration-300 uppercase tracking-wider">
-            Book a Tour
-          </button>
+          <a href="https://form.jotform.com/232234500679050" target="_blank"  rel="noopener noreferrer" className="px-10 py-5 bg-[#81DDFB] text-white font-black cursor-pointer rounded-full text-xl shadow-[0_15px_30px_rgba(113,212,244,0.4)] hover:bg-[#F1808F] transition-all duration-300 uppercase tracking-wider inline-block">Book a Tour</a>
         </div>
       </section>
 

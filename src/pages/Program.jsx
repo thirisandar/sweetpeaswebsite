@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Navbar from '../components/Navbar';
 import Footer from "../components/Footer";
 
@@ -24,6 +24,13 @@ const Program = () => {
           description: "Montessori is a scientifically founded method of educating children founded on the belief",
           bgColor: "bg-[#D9FF30]", // Lime Green
           badgeColor: "bg-black"
+        },
+        {
+          age: "5 to 6 Years",
+          title: "Upper Kindergarten Program",
+          description: "Montessori is a scientifically founded method of educating children founded on the belief",
+          bgColor: "bg-[#FFD600]", // Yellow
+          badgeColor: "bg-black"
         }
       ];
 
@@ -37,10 +44,13 @@ const Program = () => {
         { title: "YOGA & Meditation", icon: "★" },
         { title: "PE", icon: "📦" },
       ];
+
+      const [showForm, setShowForm] = useState(false);
+      
   return (
     <div className="min-h-screen bg-white">
       {/* Navbar with dark text */}
-      <Navbar isTransparent={false} />
+      <Navbar isTransparent={true} showForm={showForm} setShowForm={setShowForm} />
       <div className="pt-20"></div>
       <header className="py-8 lg:py-12 px-6 lg:px-20 overflow-hidden">
         <div className="max-w-[1600px] mx-auto flex flex-col items-start space-y-2 lg:space-y-4">
@@ -96,58 +106,43 @@ const Program = () => {
         </div>
       </header>
 
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
             
-            {/* Section Title */}
             <div className="text-center mb-16 lg:mb-24">
             <h2 className="text-3xl md:text-5xl lg:text-[6rem] font-black tracking-tighter uppercase text-white drop-shadow-[0_5px_0_rgba(0,0,0,1)] stroke-black outline-title">
                 Our Programs
             </h2>
             </div>
 
-            {/* Programs Grid */}
-            {/* Added 'gap-10' for mobile so cards don't touch each other vertically */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-4 lg:gap-8 max-w-[2000px] mx-auto">
             {programs.map((prog, index) => (
                 <div 
-                key={index} 
-                /* MOBILE FIX: 
-                    - Changed 'w-100' to 'w-full' so it fits mobile screens.
-                    - Changed 'h-120' to 'min-h-[450px] md:h-[500px]' so text doesn't overflow on small screens.
-                */
-                className={`${prog.bgColor} w-full min-h-[480px] md:h-[500px] lg:h-[600px] rounded-[40px] lg:rounded-[60px] p-8 lg:p-10 flex flex-col items-start justify-between shadow-xl transition-transform hover:-translate-y-4 duration-500`}
+                key={index} className={`${prog.bgColor} w-full min-h-[480px] md:h-[500px] lg:h-[600px] rounded-[40px] lg:rounded-[60px] p-8 lg:p-10 flex flex-col items-start justify-between shadow-xl transition-transform hover:-translate-y-4 duration-500`}
                 >
                 <div>
-                    {/* Age Badge */}
                     <div className={`${prog.badgeColor} px-7 py-3 rounded-full mb-6 lg:mb-10 inline-block shadow-lg`}>
                     <span className="text-white text-md lg:text-xl font-black uppercase">
                         {prog.age}
                     </span>
                     </div>
 
-                    {/* Program Title */}
                     <h3 className="text-black text-3xl md:text-2xl lg:text-4xl font-black leading-tight mb-6 lg:mb-10">
                     {prog.title}
                     </h3>
 
-                    {/* Description */}
                     <p className="text-black text-lg lg:text-xl font-medium leading-relaxed opacity-90 max-w-sm">
                     {prog.description}
                     </p>
                 </div>
 
-                {/* See More Button */}
-                <button className="bg-black text-white px-8 py-4 md:px-5 md:py-3 rounded-full text-lg lg:text-xl font-black cursor-pointer transition-transform active:scale-95 shadow-xl mt-6">
-                    See More
-                </button>
+    
                 </div>
             ))}
             </div>
         </div>
       </section>
 
-      {/* --- SECTION: PROGRAM DETAILS (sweet26.png) --- */}
       <section className="py-20 px-6 lg:px-20">
         <div className="container mx-auto flex flex-col lg:flex-row gap-10 items-stretch">
           
@@ -163,9 +158,6 @@ const Program = () => {
                   Montessori is a scientifically founded method of educating children founded on the belief
                 </p>
              </div>
-             <button className="bg-black text-white w-fit px-7 py-3 rounded-full text-lg font-black mt-10">
-                See More
-             </button>
           </div>
 
           <div className="w-full lg:w-2/3 bg-[#F8F8F8] rounded-[60px] lg:rounded-[80px] p-10 lg:p-20 flex flex-col justify-center">
@@ -181,8 +173,48 @@ const Program = () => {
           </div>
 
         </div>
-      </section>
-    
+      </section> */}
+        <section className="py-16 lg:py-24 px-6 lg:px-20 bg-white">
+      <div className="container mx-auto">
+        
+        {/* --- TOP: PROGRAM DETAILS HEADER --- */}
+        <div className="w-full bg-[#F8F8F8] rounded-[40px] lg:rounded-[80px] p-8 lg:p-16 mb-10 lg:mb-16">
+          <h2 className="text-black text-3xl lg:text-6xl font-black mb-6 lg:mb-10 tracking-tight text-left lg:text-left">
+             Program Details
+          </h2>
+          <p className="text-lg lg:text-2xl font-medium leading-[1.6] text-justify max-w-6xl">
+            All the programs are Montessori method-based, emphasizing hands-on learning, 
+            individualized instruction, and the development of independence, responsibility, 
+            and critical thinking skills in a child-centered environment.
+          </p>
+        </div>
+
+        {/* --- BOTTOM: 4 COLUMN GRID (Laptop) / 2 COLUMN GRID (Mobile) --- */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          {programs.map((program, index) => (
+            <div 
+              key={index} 
+              className={`${program.bgColor} rounded-[40px] lg:rounded-[60px] p-8 lg:p-10 flex flex-col justify-between shadow-lg transition-transform hover:scale-[1.02] duration-300 min-w-[100px] min-h-[300px]`}
+            >
+              <div>
+                <div className={`${program.badgeColor} inline-block px-5 py-2 rounded-full mb-8 lg:mb-10`}>
+                  <span className="text-white text-sm lg:text-base font-black uppercase">
+                    {program.age}
+                  </span>
+                </div>
+                <h3 className="text-2xl lg:text-2xl font-black leading-tight mb-6 text-black uppercase">
+                  {program.title}
+                </h3>
+                <p className="text-black text-base lg:text-lg leading-relaxed font-medium">
+                  {program.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
 
         {/* Extra Activities section */}
        <section className="py-12 lg:py-20 bg-white">
@@ -289,9 +321,7 @@ const Program = () => {
 
                 {/* APPLY NOW Button */}
                 <div className="mt-8 lg:-mt-20 lg:ml-150 flex justify-center lg:justify-start">
-                    <button className="bg-white text-black px-7 lg:px-5 py-2 lg:py-4 rounded-full text-xl lg:text-xl font-black uppercase shadow-2xl transition-transform active:scale-95 cursor-pointer">
-                        APPLY NOW
-                    </button>
+                  <a href="https://form.jotform.com/232234500679050" target="_blank" rel="noopener noreferrer" className="bg-white text-black px-7 lg:px-5 py-2 lg:py-4 rounded-full text-xl lg:text-xl font-black uppercase shadow-2xl transition-transform active:scale-95 cursor-pointer inline-block text-center">APPLY NOW</a>
                 </div>
 
             </div>
