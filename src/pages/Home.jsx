@@ -26,7 +26,7 @@ const Home = () => {
 
       <main className="pt-20">
         {/* HERO SECTION - Mobile Optimized */}
-        <section className="container mx-auto px-6 py-8 lg:py-12 flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-20">
+        {/* <section className="container mx-auto px-6 py-8 lg:py-12 flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-20">
           
           <div className="relative">
             <div className="w-[280px] h-[280px] lg:w-[480px] lg:h-[420px] overflow-hidden rounded-t-[60px] lg:rounded-t-[100px] rounded-bl-[60px] lg:rounded-bl-[100px] rounded-br-[20px] lg:rounded-br-[30px] border-4 border-white shadow-xl">
@@ -48,7 +48,47 @@ const Home = () => {
                 ကျောင်းထားပါ
               </h1>
           </div>
-        </section>  
+        </section>   */}
+        <section className="container mx-auto px-6 py-12 lg:py-24 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16">
+  
+            {/* --- IMAGE SIDE: Reduced to 5/12 to give text more room --- */}
+            <div className="w-full lg:w-5/12 flex justify-center lg:justify-end relative">
+              <div className="relative">
+                {/* Masked Image Shape */}
+                <div className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[460px] lg:h-[400px] overflow-hidden rounded-t-[60px] lg:rounded-t-[100px] rounded-bl-[60px] lg:rounded-bl-[100px] rounded-br-[20px] lg:rounded-br-[30px] border-8 border-white shadow-2xl relative z-10">
+                  <img 
+                    src="/images/swheader.png" 
+                    alt="Kids at SweetPeas" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                {/* Decorative Green Shape */}
+                <div className="absolute -bottom-4 -left-4 lg:-bottom-8 lg:-left-8 w-24 h-24 lg:w-32 lg:h-32 bg-[#A0D468] rounded-[30px] -z-10 rotate-12 shadow-lg"></div>
+              </div>
+            </div>
+
+            {/* --- RIGHT SIDE: MASSIVE MYANMAR TEXT --- */}
+            <div className="w-full lg:w-7/12 flex flex-col font-myanmar text-center lg:text-left relative z-10">
+              
+              {/* Line 1: Increased leading to [1.4] for mobile and [1.2] for laptop 
+                  to ensure "မှ" and other markers don't overlap */}
+              <h1 className="text-4xl md:text-6xl lg:text-[7.5rem] font-bold text-slate-800 leading-[1.4] lg:leading-[1.2] mb-2 lg:mb-4 tracking-normal">
+                ကလေးပျော်မှ
+              </h1>
+              
+              {/* Line 2: Increased leading to [1.2] on laptop to keep it "straight" 
+                  and prevent it from sliding under the top line */}
+              <h1 className="text-5xl md:text-7xl lg:text-[10rem] font-bold text-[#F1808F] leading-[1.3] lg:leading-[1.2] tracking-normal">
+                ကျောင်းထားပါ
+              </h1>
+            </div>
+
+            {/* <div className="absolute bottom-[-2px] left-0 w-full overflow-hidden leading-[0] z-0">
+              <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-[80px] lg:h-[150px] fill-white">
+                  <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C49.49,24.19,152.09,42.7,321.39,56.44Z"></path>
+              </svg>
+            </div> */}
+        </section>
 
         {/* GALLERY SECTION (sweet3.jpg) */}
         <section className="container mx-auto px-6 py-24">
@@ -249,7 +289,7 @@ const Home = () => {
               <div className="w-full lg:w-1/2 relative group">
                 <div className="border-[12px] border-white/30 rounded-[60px] overflow-hidden shadow-2xl rotate-9 group-hover:rotate-0 transition-transform duration-500">
                   <div className="relative aspect-[4/3]">
-                      <img src="/images/language.jpg" alt="Language" className="w-full h-full object-cover" />
+                      <img src="/images/sw5.jpg" alt="Language" className="w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                         <h3 className="text-5xl lg:text-7xl font-black text-white text-center drop-shadow-xl uppercase italic">
                           Language
@@ -282,7 +322,7 @@ const Home = () => {
               <div className="w-full lg:w-1/2 relative group">
                 <div className="border-[12px] border-white/30 rounded-[60px] overflow-hidden shadow-2xl -rotate-9 group-hover:rotate-0 transition-transform duration-500">
                   <div className="relative aspect-[4/3]">
-                      <img src="/images/practical-life.jpg" alt="Practical Life" className="w-full h-full object-cover" />
+                      <img src="/images/sw6.jpg" alt="Practical Life" className="w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                         <h3 className="text-5xl lg:text-7xl font-black text-white text-center leading-tight drop-shadow-xl uppercase italic">
                           Practical<br/>Life
@@ -315,7 +355,7 @@ const Home = () => {
               <div className="w-full lg:w-1/2 relative group">
                 <div className="border-[12px] border-white/30 rounded-[60px] overflow-hidden shadow-2xl rotate-9 group-hover:rotate-0 transition-transform duration-500">
                   <div className="relative aspect-[4/3]">
-                      <img src="/images/language.jpg" alt="Language" className="w-full h-full object-cover" />
+                      <img src="/images/sw7.jpg" alt="Language" className="w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                         <h3 className="text-5xl lg:text-7xl font-black text-white text-center drop-shadow-xl uppercase italic">
                           Language
@@ -348,7 +388,7 @@ const Home = () => {
               <div className="w-full lg:w-1/2 relative group">
                 <div className="border-[12px] border-white/30 rounded-[60px] overflow-hidden shadow-2xl -rotate-9 group-hover:rotate-0 transition-transform duration-500">
                   <div className="relative aspect-[4/3]">
-                      <img src="/images/practical-life.jpg" alt="Practical Life" className="w-full h-full object-cover" />
+                      <img src="/images/sw8.jpg" alt="Practical Life" className="w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                         <h3 className="text-5xl lg:text-7xl font-black text-white text-center leading-tight drop-shadow-xl uppercase italic">
                           Practical<br/>Life
@@ -427,21 +467,21 @@ const Home = () => {
           </div>
         </section>
 
-                {/* INTERMEDIATE CTA SECTION */}
-      <section className="py-20 bg-[#FFF9E5] overflow-hidden relative">
-        <div className="absolute -top-10 -left-10 w-40 h-40 bg-sweet-blue/10 rounded-full"></div>
-        <div className="absolute -bottom-10 -right-10 w-60 h-60 bg-sweet-pink/10 rounded-full"></div>
+        {/* INTERMEDIATE CTA SECTION */}
+        <section className="py-20 bg-[#FFF9E5] overflow-hidden relative">
+          <div className="absolute -top-10 -left-10 w-40 h-40 bg-sweet-blue/10 rounded-full"></div>
+          <div className="absolute -bottom-10 -right-10 w-60 h-60 bg-sweet-pink/10 rounded-full"></div>
 
-        <div className="container mx-auto px-6 text-center relative z-10">
-          <h2 className="text-4xl lg:text-6xl font-black text-dark-text uppercase mb-8 leading-tight">
-            Ready to start <br className="lg:hidden" /> <span className="text-sweet-pink">your journey?</span>
-          </h2>
-          <p className="text-lg lg:text-xl font-bold text-slate-500 uppercase mb-10 max-w-2xl mx-auto">
-            Visit our campus today and see how we create a brighter future for your little ones.
-          </p>
-          <a href="https://form.jotform.com/232234500679050" target="_blank"  rel="noopener noreferrer" className="px-10 py-5 bg-[#81DDFB] text-white font-black cursor-pointer rounded-full text-xl shadow-[0_15px_30px_rgba(113,212,244,0.4)] hover:bg-[#F1808F] transition-all duration-300 uppercase tracking-wider inline-block">Book a Tour</a>
-        </div>
-      </section>
+          <div className="container mx-auto px-6 text-center relative z-10">
+            <h2 className="text-4xl lg:text-6xl font-black text-dark-text uppercase mb-8 leading-tight">
+              Ready to start <br className="lg:hidden" /> <span className="text-sweet-pink">your journey?</span>
+            </h2>
+            <p className="text-lg lg:text-xl font-bold text-slate-500 uppercase mb-10 max-w-2xl mx-auto">
+              Visit our campus today and see how we create a brighter future for your little ones.
+            </p>
+            <a href="https://form.jotform.com/232234500679050" target="_blank"  rel="noopener noreferrer" className="px-10 py-5 bg-[#81DDFB] text-white font-black cursor-pointer rounded-full text-xl shadow-[0_15px_30px_rgba(113,212,244,0.4)] hover:bg-[#F1808F] transition-all duration-300 uppercase tracking-wider inline-block">Book a Tour</a>
+          </div>
+        </section>
 
       <Footer />
       </main>

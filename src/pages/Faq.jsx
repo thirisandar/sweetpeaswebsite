@@ -151,7 +151,7 @@ const Faq = () => {
                   <div className="flex flex-col items-center lg:items-start">
                       {/* Top Image: Fixed size for laptop, full width for mobile */}
                       <div className="w-full lg:w-90 h-64 lg:h-80 mb-6 lg:mb-10">
-                          <img src="/images/headerimg.png" alt="Caring hands" className="w-full h-full object-cover rounded-[30px] lg:rounded-[40px]" />
+                          <img src="/images/sw9.jpg" alt="Caring hands" className="w-full h-full object-cover rounded-[30px] lg:rounded-[40px]" />
                       </div>                    
                       
                       {/* Quality Care Card: Fixed width for laptop, full width for mobile */}
@@ -160,7 +160,7 @@ const Faq = () => {
                               QUALITY <br /> CARE
                           </h2>
                           <div className="w-full mt-4">
-                              <img src="/images/headerimg.png" alt="Caring hands" className="w-full h-auto object-contain" />
+                              <img src="/images/sw10.jpg" alt="Caring hands" className="w-full h-auto object-contain" />
                           </div>
                       </div>
                   </div>
@@ -172,12 +172,12 @@ const Faq = () => {
               {/* Small Image Card */}
               {/* Removed fixed h-110 on mobile to prevent stretching */}
               <div className="lg:col-span-4 rounded-[40px] lg:rounded-[80px] h-64 lg:h-110">
-                  <img src="/images/headerimg.png" alt="Caring hands" className="w-full h-full object-cover rounded-[30px] lg:rounded-[40px]" />
+                  <img src="/images/sw11.jpg" alt="Caring hands" className="w-full h-full object-cover rounded-[30px] lg:rounded-[40px]" />
               </div> 
               
               {/* Large Image Card */}
               <div className="lg:col-span-8 rounded-[40px] lg:rounded-[80px] overflow-hidden bg-[#81DDFB] h-64 lg:h-110">
-                  <img src="/images/headerimg.png" alt="Caring hands" className="w-full h-full object-cover rounded-[30px] lg:rounded-[40px]" />
+                  <img src="/images/sw6.jpg" alt="Caring hands" className="w-full h-full object-cover rounded-[30px] lg:rounded-[40px]" />
               </div>
             </div>
 

@@ -19,11 +19,13 @@ const About = () => {
 
   const benefits = [
     { title: "Montessori-Certified", myanmar: "Teacher များမှ သင်ကြားပေးခြင်း။" },
-    { title: "လုံခြုံပြီး သန့်ရှင်း", myanmar: "သပ်ရပ်သော ပတ်ဝန်းကျင်ကို ဖန်တီးထားခြင်း။" },
-    { title: "ကျောင်းသား", myanmar: "ငါးယောက်လျှင် ဆရာတစ်ယောက်နှုန်းဖြင့် သင်ကြားပေးခြင်း။" },
-    { title: "ကျောင်းသူ၊ ကျောင်းသား", myanmar: "အယောက် (၅၀) သာလက်ခံသင်ကြားပေးခြင်း။" },
+    { title: "", myanmar: "လုံခြုံပြီး သန့်ရှင်း သပ်ရပ်သော ပတ်ဝန်းကျင်ကို ဖန်တီးထားခြင်း။" },
+    { title: "", myanmar: "ကျောင်းသား ငါးယောက်လျှင် ဆရာတစ်ယောက်နှုန်းဖြင့် သင်ကြားပေးခြင်း။" },
+    { title: "", myanmar: "ကျောင်းသူ၊ ကျောင်းသား အယောက် (၅၀) သာ လက်ခံသင်ကြားပေးခြင်း။" },
     { title: "Registration fees", myanmar: "ပေးဆောင်စရာ မလိုခြင်း။" },
-    { title: "Child Centered", myanmar: "နည်းလမ်းကို အသုံးပြုပြီး သားသားမီးမီးတစ်ယောက်စီကို အထူးဂရုပြု ပြုစုပျိုးထောင်ပေးခြင်း။" },
+    { title: "Child Centered", myanmar: "နည်းလမ်းကို အသုံးပြုပြီး သားသားမီးမီး တစ်ယောက်စီကို အထူးဂရုပြု ပြုစုပျိုးထောင်ပေးခြင်း။" },
+    { title: "", myanmar: "သားသားမီးမီး တို့အတွက် လစဉ်ကျန်းမာရေးစစ်ဆေးချက်များ ပြုလုပ်ပေးခြင်း။" },
+    { title: "", myanmar: "သားသား၊ မီးမီးတို့ တိုးတက်မှုအတွက် တစ်လ (၁) ကြိမ် ဖေဖေမေမေတို့နှင့် ဆွေးနွေးတိုင်ပင်ပေးခြင်း။" }
   ];
 
     const [showForm, setShowForm] = useState(false);
@@ -166,7 +168,7 @@ const About = () => {
             <div key={teacher.id} className="group flex flex-col items-center">
               <div className="relative w-full aspect-[3/4] overflow-hidden rounded-xl lg:rounded-3xl bg-white shadow-2xl border-4 border-white/20">
                 <img 
-                  src={`/images/teacher-${teacher.id}.jpg`} 
+                  src={`/images/tr${teacher.id}.jpg`} 
                   alt={teacher.name} 
                   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                 />
@@ -214,65 +216,74 @@ const About = () => {
       </section>
 
       <section className="relative py-24 lg:py-32 overflow-hidden" style={{ background: 'linear-gradient(to bottom, #71D4F4, #F1808F)' }}>
-  
-  {/* --- DENSE STICKER LAYER --- */}
-  {/* These are absolute positioned stars scattered across the section */}
-  <div className="absolute inset-0 pointer-events-none select-none">
-    {/* Large Yellow Stars */}
-    <div className="absolute top-[5%] left-[8%] text-yellow-300 text-6xl opacity-80 rotate-12 animate-pulse">★</div>
-    <div className="absolute top-[20%] right-[12%] text-yellow-200 text-5xl opacity-70 -rotate-12">★</div>
-    <div className="absolute bottom-[15%] left-[15%] text-yellow-300 text-4xl opacity-60 rotate-45">★</div>
-    <div className="absolute bottom-[5%] right-[5%] text-yellow-100 text-7xl opacity-40 animate-bounce">★</div>
+        <div className="absolute inset-0 pointer-events-none select-none">
+          <div className="absolute top-[5%] left-[8%] text-yellow-300 text-6xl opacity-80 rotate-12 animate-pulse">★</div>
+          <div className="absolute top-[20%] right-[12%] text-yellow-200 text-5xl opacity-70 -rotate-12">★</div>
+          <div className="absolute bottom-[15%] left-[15%] text-yellow-300 text-4xl opacity-60 rotate-45">★</div>
+          <div className="absolute bottom-[5%] right-[5%] text-yellow-100 text-7xl opacity-40 animate-bounce">★</div>
 
-    {/* Small White Sparkles (✦) */}
-    <div className="absolute top-[15%] left-[25%] text-white text-3xl opacity-90">✦</div>
-    <div className="absolute top-[10%] right-[30%] text-white text-4xl opacity-80 animate-pulse">✦</div>
-    <div className="absolute top-[45%] left-[5%] text-white text-2xl opacity-50">✦</div>
-    <div className="absolute top-[60%] right-[8%] text-white text-3xl opacity-70">✦</div>
-    <div className="absolute bottom-[25%] right-[25%] text-white text-4xl opacity-60">✦</div>
-    
-    {/* Tiny accent stars (✧) to fill gaps */}
-    <div className="absolute top-1/2 left-[18%] text-white/40 text-xl">✧</div>
-    <div className="absolute bottom-1/3 right-[40%] text-white/30 text-2xl animate-spin-slow">✧</div>
-    <div className="absolute top-1/4 right-[5%] text-white/40 text-lg">✧</div>
-  </div>
+          <div className="absolute top-[15%] left-[25%] text-white text-3xl opacity-90">✦</div>
+          <div className="absolute top-[10%] right-[30%] text-white text-4xl opacity-80 animate-pulse">✦</div>
+          <div className="absolute top-[45%] left-[5%] text-white text-2xl opacity-50">✦</div>
+          <div className="absolute top-[60%] right-[8%] text-white text-3xl opacity-70">✦</div>
+          <div className="absolute bottom-[25%] right-[25%] text-white text-4xl opacity-60">✦</div>
+          
+          <div className="absolute top-1/2 left-[18%] text-white/40 text-xl">✧</div>
+          <div className="absolute bottom-1/3 right-[40%] text-white/30 text-2xl animate-spin-slow">✧</div>
+          <div className="absolute top-1/4 right-[5%] text-white/40 text-lg">✧</div>
+        </div>
 
-  <div className="container mx-auto px-6 text-center relative z-10">
-    
-    {/* Pill-shaped Outline Button/Badge */}
-    <div className="inline-block mb-12">
-      <div className="border-[1px] border-white/60 px-7 lg:px-12 py-3 lg:py-5 rounded-full shadow-2xl backdrop-blur-sm cursor-pointer hover:bg-white/10 transition-all">
-        <span className="text-white text-md lg:text-xl font-black uppercase tracking-tight">
-          We appreciate the True Words !
-        </span>
-      </div>
-    </div>
-
-    {/* Large Title */}
-    <h2 className="text-white text-3xl lg:text-[5rem] font-black uppercase tracking-tighter leading-none mb-24 drop-shadow-[0_20px_20px_rgba(0,0,0,0.2)]">
-      WHY CHOOSE US ?
-    </h2>
-
-    {/* Benefit Cards (Glassmorphism style from sweet21.jpg) */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-14 max-w-7xl mx-auto">
-       {benefits.map((item, index) => (
-          <div 
-            key={index} 
-            className="bg-white/15 backdrop-blur-xl border border-white/30 p-10 lg:p-14 rounded-[50px] lg:rounded-[80px] shadow-2xl text-left transition-all duration-500 hover:bg-white/25 hover:-translate-y-4 group relative"
-          >
-             {/* Mini sticker on the card itself */}
-             <div className="absolute -top-4 -right-4 text-yellow-300 text-4xl opacity-0 group-hover:opacity-100 transition-opacity">★</div>
-
-             <h4 className="text-white text-2xl lg:text-4xl font-black uppercase mb-6 leading-tight group-hover:text-yellow-200 transition-colors">
-                {item.title}
-             </h4>
-             <p className="text-white/95 font-myanmar text-xl lg:text-3xl font-bold leading-relaxed">
-                {item.myanmar}
-             </p>
+        <div className="container mx-auto px-6 text-center relative z-10">
+          
+          {/* Pill-shaped Outline Button/Badge */}
+          <div className="inline-block mb-12">
+            <div className="border-[1px] border-white/60 px-7 lg:px-12 py-3 lg:py-5 rounded-full shadow-2xl backdrop-blur-sm cursor-pointer hover:bg-white/10 transition-all">
+              <span className="text-white text-md lg:text-xl font-black uppercase tracking-tight">
+                We appreciate the True Words !
+              </span>
+            </div>
           </div>
-       ))}
-    </div>
-  </div>
+
+          {/* Large Title */}
+          <h2 className="text-white text-3xl lg:text-[5rem] font-black uppercase tracking-tighter leading-none mb-24 drop-shadow-[0_20px_20px_rgba(0,0,0,0.2)]">
+            WHY CHOOSE US ?
+          </h2>
+
+          {/* Benefit Cards (Glassmorphism style from sweet21.jpg) */}
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-14 max-w-7xl mx-auto">
+            {benefits.map((item, index) => (
+                <div 
+                  key={index} 
+                  className="bg-white/15 backdrop-blur-xl border border-white/30 p-10 lg:p-14 rounded-[50px] lg:rounded-[80px] shadow-2xl text-left transition-all duration-500 hover:bg-white/25 hover:-translate-y-4 group relative"
+                >
+                  <div className="absolute -top-4 -right-4 text-yellow-300 text-4xl opacity-0 group-hover:opacity-100 transition-opacity">★</div>
+
+                  <h4 className="text-white text-2xl lg:text-4xl font-black uppercase mb-6 leading-tight group-hover:text-yellow-200 transition-colors">
+                      {item.title}
+                  </h4>
+                  <p className="text-white/95 font-myanmar text-xl lg:text-3xl font-bold leading-relaxed">
+                      {item.myanmar}
+                  </p>
+                </div>
+            ))}
+          </div> */}
+
+            <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 items-start max-w-[1400px] mx-auto">
+                      {benefits.map((item, index) => (
+                        <div key={index} className="bg-white/20 backdrop-blur-md p-3 lg:p-10 rounded-2xl lg:rounded-[40px] shadow-lg border border-white/20 flex flex-col justify-start h-auto transition-all duration-300 hover:bg-white/30 hover:scale-[1.03]">
+                          {item.title && (
+                            <h4 className="text-white text-[10px] lg:text-2xl font-bold mb-1 lg:mb-4 leading-tight uppercase">
+                              {item.title}
+                            </h4>
+                          )}
+
+                          <p className="text-white text-[15px] lg:text-xl font-myanmar font-medium leading-snug lg:leading-relaxed">
+                            {item.myanmar}
+                          </p>
+                        </div>
+                      ))}
+            </div>
+        </div>
       </section>
 
        <Footer />

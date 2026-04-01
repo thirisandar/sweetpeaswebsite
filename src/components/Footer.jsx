@@ -144,15 +144,14 @@ const Footer = ({ isTransparent }) => {
             <div className="rounded-[30px] lg:rounded-[50px] overflow-hidden aspect-video lg:aspect-[21/9]">
               {/* ✅ Fixed: Removed './public' from path */}
               <img 
-                src="/images/headerimg.png" 
+                src="/images/schoolphoto.jpg" 
                 alt="Mandalay Campus" 
                 className="w-full h-full object-cover"
               />
             </div>
             {/* Floating Logo Badge */}
-            <div className="absolute top-6 right-6 bg-white p-3 rounded-2xl shadow-lg flex items-center gap-2">
-              <img src="/images/logo.png" className="w-8 h-8 object-contain" alt="Logo" />
-              <span className="font-black text-xs uppercase text-slate-800">Mandalay</span>
+            <div className="absolute top-6 right-6 p-3 rounded-2xl shadow-lg flex items-center gap-2">
+              <img src="/images/logo.jpg" className="w-8 h-8 object-contain" alt="Logo" />
             </div>
           </div>
         </div>
