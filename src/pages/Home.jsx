@@ -117,10 +117,9 @@ const Home = () => {
         </section>
                   
         {/* swiper section */}
-        <section className="py-12 lg:py-20 relative overflow-hidden" 
+        {/* <section className="py-12 lg:py-20 relative overflow-hidden" 
                 style={{ background: 'linear-gradient(135deg, #71D4F4 0%, #B8AEF2 100%)' }}>
           
-          {/* Section Header Text */}
           <div className="container mx-auto px-4 lg:px-6 text-center mb-8 lg:mb-12">
             <h2 className="text-3xl lg:text-6xl font-black text-white uppercase tracking-tighter mb-3 lg:mb-4 leading-tight">
               Discover Our Message For Parents
@@ -131,7 +130,6 @@ const Home = () => {
           </div>
 
           <div className="relative max-w-[1400px] mx-auto px-2 lg:px-10">
-            {/* swiper left */}
             <button 
                 ref={prevRef}
                 className="absolute left-1 lg:left-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 lg:w-12 lg:h-12 bg-sweet-pink rounded-full flex items-center justify-center text-white shadow-xl hover:scale-110 transition cursor-pointer disabled:opacity-50"
@@ -141,7 +139,6 @@ const Home = () => {
               </svg>
             </button>
 
-            {/* swiper right */}
             <button 
                 ref={nextRef}
                 className="absolute right-1 lg:right-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 lg:w-12 lg:h-12 bg-sweet-pink rounded-full flex items-center justify-center text-white shadow-xl hover:scale-110 transition cursor-pointer disabled:opacity-50"
@@ -174,12 +171,10 @@ const Home = () => {
                   <div className="bg-white rounded-3xl lg:rounded-[45px] overflow-hidden shadow-2xl relative aspect-[4/5] border-4 lg:border-8 border-white/20">
                     <img src={item.img} className="w-full h-full object-cover" alt="message" />
                     
-                    {/* Tiny Logo in top left of card */}
                     <div className="absolute top-3 lg:top-4 left-3 lg:left-4 w-8 h-8 lg:w-10 lg:h-10 bg-white/80 rounded-full p-0.5 lg:p-1 shadow-sm">
                       <img src="/images/logo.png" className="w-full h-full object-contain" />
                     </div>
 
-                    {/* Myanmar Text Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center p-4 lg:p-6 bg-black/5">
                       <h3 className="text-lg lg:text-3xl font-bold text-white text-center font-myanmar drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] leading-tight">
                         {item.text}
@@ -190,7 +185,7 @@ const Home = () => {
               ))}
             </Swiper>
           </div>
-        </section>
+        </section> */}
       
         {/* CONNECTIONS SECTION (sweet5.jpg) */}
         <section className="py-24 bg-white">
