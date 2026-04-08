@@ -186,7 +186,7 @@ const Home = () => {
             </Swiper>
           </div>
         </section> */}
-      
+        
         {/* CONNECTIONS SECTION (sweet5.jpg) */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6">
@@ -237,12 +237,12 @@ const Home = () => {
           <div className="flex flex-col lg:flex-row items-center lg:items-end gap-2 lg:gap-4 mb-20 lg:mb-30 justify-center lg:justify-start lg:ml-10">
               {/* English Text: Smaller on mobile (text-3xl) to fit one line */}
               <h2 className="text-3xl md:text-4xl lg:text-6xl font-black text-white uppercase tracking-tight text-center lg:text-left">
-                  SWEETPEAS
+                  SWEETPEAS 
               </h2>
               
               {/* Myanmar Text: Centered and scaled down (text-2xl) for mobile */}
               <span className="text-2xl md:text-3xl lg:text-5xl font-bold text-white font-myanmar text-center lg:text-left leading-relaxed">
-                  ဘာတွေသင်မှာလည်း
+                က ဘာတွေသင်မှာလည်း
               </span>
           </div>
 
@@ -251,7 +251,7 @@ const Home = () => {
               <div className="w-full lg:w-1/2 relative group">
                 <div className="border-[12px] border-white/30 rounded-[60px] overflow-hidden shadow-2xl -rotate-9 group-hover:rotate-0 transition-transform duration-500">
                   <div className="relative aspect-[4/3]">
-                      <img src="/images/practicallife.png" alt="Practical Life" className="w-full h-full object-cover" />
+                      <img src="/images/Sp1.jpg" alt="Practical Life" className="w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                         {/* <h3 className="text-5xl lg:text-7xl font-black text-white text-center leading-tight drop-shadow-xl uppercase italic">
                           Practical<br/>Life
@@ -317,10 +317,10 @@ const Home = () => {
               <div className="w-full lg:w-1/2 relative group">
                 <div className="border-[12px] border-white/30 rounded-[60px] overflow-hidden shadow-2xl -rotate-9 group-hover:rotate-0 transition-transform duration-500">
                   <div className="relative aspect-[4/3]">
-                      <img src="/images/sw6.jpg" alt="Practical Life" className="w-full h-full object-cover" />
+                      <img src="/images/Sp2.jpg" alt="Practical Life" className="w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                         <h3 className="text-5xl lg:text-7xl font-black text-white text-center leading-tight drop-shadow-xl uppercase italic">
-                          Practical<br/>Life
+                            Sensorial<br/>
                         </h3>
                       </div>
                   </div>
@@ -346,14 +346,14 @@ const Home = () => {
             </div>
 
              {/* Curriculum Item 4: */}
-             <div className="flex flex-col lg:flex-row-reverse items-center gap-30 mb-32">
+            <div className="flex flex-col lg:flex-row-reverse items-center gap-30 mb-32">
               <div className="w-full lg:w-1/2 relative group">
                 <div className="border-[12px] border-white/30 rounded-[60px] overflow-hidden shadow-2xl rotate-9 group-hover:rotate-0 transition-transform duration-500">
                   <div className="relative aspect-[4/3]">
                       <img src="/images/sw7.jpg" alt="Language" className="w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                         <h3 className="text-5xl lg:text-7xl font-black text-white text-center drop-shadow-xl uppercase italic">
-                          Language
+                            Math
                         </h3>
                       </div>
                   </div>
@@ -383,10 +383,10 @@ const Home = () => {
               <div className="w-full lg:w-1/2 relative group">
                 <div className="border-[12px] border-white/30 rounded-[60px] overflow-hidden shadow-2xl -rotate-9 group-hover:rotate-0 transition-transform duration-500">
                   <div className="relative aspect-[4/3]">
-                      <img src="/images/sw8.jpg" alt="Practical Life" className="w-full h-full object-cover" />
+                      <img src="/images/Sp3.jpg" alt="Practical Life" className="w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                         <h3 className="text-5xl lg:text-7xl font-black text-white text-center leading-tight drop-shadow-xl uppercase italic">
-                          Practical<br/>Life
+                            Culture<br/>
                         </h3>
                       </div>
                   </div>

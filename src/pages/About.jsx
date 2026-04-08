@@ -39,7 +39,7 @@ const About = () => {
         {/* 2. Background Image - Ensure z-0 */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/about-header.jpg" 
+            src="/images/Sp4.png" 
             alt="SweetPeas Playground" 
             className="w-full h-full object-cover"
           />
