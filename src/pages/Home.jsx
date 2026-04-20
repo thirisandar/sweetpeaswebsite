@@ -253,9 +253,9 @@ const Home = () => {
                   <div className="relative aspect-[4/3]">
                       <img src="/images/Sp1.jpg" alt="Practical Life" className="w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                        {/* <h3 className="text-5xl lg:text-7xl font-black text-white text-center leading-tight drop-shadow-xl uppercase italic">
+                        <h3 className="text-5xl lg:text-7xl font-black text-white text-center leading-tight drop-shadow-xl uppercase italic">
                           Practical<br/>Life
-                        </h3> */}
+                        </h3>
                       </div>
                   </div>
                 </div>
@@ -474,7 +474,7 @@ const Home = () => {
             <p className="text-lg lg:text-xl font-bold text-slate-500 uppercase mb-10 max-w-2xl mx-auto">
               Visit our campus today and see how we create a brighter future for your little ones.
             </p>
-            <a href="https://form.jotform.com/232234500679050" target="_blank"  rel="noopener noreferrer" className="px-10 py-5 bg-[#81DDFB] text-white font-black cursor-pointer rounded-full text-xl shadow-[0_15px_30px_rgba(113,212,244,0.4)] hover:bg-[#F1808F] transition-all duration-300 uppercase tracking-wider inline-block">Book a Tour</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeMmA0kaOZcewFc6CrFiPwdTIYyp-3XLqamXuce21WLUyGiSA/viewform?embedded=true" target="_blank"  rel="noopener noreferrer" className="px-10 py-5 bg-[#81DDFB] text-white font-black cursor-pointer rounded-full text-xl shadow-[0_15px_30px_rgba(113,212,244,0.4)] hover:bg-[#F1808F] transition-all duration-300 uppercase tracking-wider inline-block">Book a Tour</a>
           </div>
         </section>
 

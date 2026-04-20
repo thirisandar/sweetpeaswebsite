@@ -170,8 +170,14 @@ const Footer = ({ isTransparent }) => {
           
           {/* Col 1: Address + Social Icons */}
           <div className="text-center md:text-left space-y-2">
-            <p className="font-black text-lg lg:text-2xl uppercase leading-tight">
-              Corner of 41A & 60A,<br /> Mandalay
+            <p className="font-black text-md lg:text-xl uppercase leading-tight">
+                Branch 1 - 41A နှင့် 60A ထောင့်,
+            </p>
+            <p className="font-black text-md lg:text-xl uppercase leading-tight">
+               Branch 2 - 102 နှင့် 69B ထောင့်
+            </p>
+            <p className="font-black text-md lg:text-xl uppercase leading-tight">
+              Branch 3 - 84 လမ်း၊ 24 နှင့် 25 ကြား (Asahi Condo)
             </p>
             <div className="flex justify-center md:justify-start gap-4 pt-4">
               {['fb', 'linkedin', 'gmail'].map(icon => {
@@ -197,6 +203,7 @@ const Footer = ({ isTransparent }) => {
           <div className="text-center py-6 border-y md:border-y-0 md:border-x border-white/10">
             <h3 className="font-black text-lg lg:text-2xl uppercase leading-tight">SweetPeas</h3>
             <p className="font-black text-2xl mt-2 tracking-widest">09-401811122</p>
+            <p className="font-black text-2xl mt-2 tracking-widest">09-401934350</p>
           </div>
 
           {/* Col 3: Slogan */}

@@ -70,7 +70,7 @@ const About = () => {
             <div className="absolute inset-0 bg-[#FFD600] translate-x-2 translate-y-2 rounded-2xl transition-transform group-hover:translate-x-1 group-hover:translate-y-1"></div>
             
             {/* The Main Blue Button layer */}
-            <a href="https://form.jotform.com/232234500679050"  target="_blank" rel="noopener noreferrer" className="relative bg-[#71D4F4] text-white px-6 lg:px-10 py-4 lg:py-4 rounded-2xl text-xl lg:text-3xl font-black uppercase tracking-widest shadow-2xl active:translate-x-1 active:translate-y-1 transition-all cursor-pointer border-none inline-block text-center">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeMmA0kaOZcewFc6CrFiPwdTIYyp-3XLqamXuce21WLUyGiSA/viewform?embedded=true"  target="_blank" rel="noopener noreferrer" className="relative bg-[#71D4F4] text-white px-6 lg:px-10 py-4 lg:py-4 rounded-2xl text-xl lg:text-3xl font-black uppercase tracking-widest shadow-2xl active:translate-x-1 active:translate-y-1 transition-all cursor-pointer border-none inline-block text-center">
               JOIN NOW
             </a>
           </div>
@@ -191,22 +191,22 @@ const About = () => {
           <div className="flex flex-wrap justify-center items-center gap-6 lg:gap-10">
             {/* Example Family Photo 1 (Landscape with thick white border) */}
             <div className="w-[80%] md:w-[45%] lg:w-[35%] bg-white p-3 rounded-2xl shadow-2xl rotate-[-2deg] hover:rotate-0 transition-transform">
-              <img src="/images/family-1.jpg" className="w-full rounded-xl" alt="Family Moment" />
+              <img src="/images/family-1.jpeg" className="w-full rounded-xl" alt="Family Moment" />
             </div>
 
             {/* Example Family Photo 2 (Portrait sticker style) */}
             <div className="w-[40%] md:w-[25%] lg:w-[20%] bg-white p-2 rounded-[50px] shadow-2xl rotate-[3deg] hover:rotate-0 transition-transform border-8 border-white">
-              <img src="/images/family-2.jpg" className="w-full aspect-[3/4] object-cover rounded-[40px]" alt="Family Moment" />
+              <img src="/images/family-2.jpeg" className="w-full aspect-[3/4] object-cover rounded-[40px]" alt="Family Moment" />
             </div>
 
             {/* Example Family Photo 3 (Horizontal sticker) */}
             <div className="w-[45%] md:w-[30%] lg:w-[25%] bg-white p-2 rounded-full shadow-2xl rotate-[-4deg] border-4 border-white overflow-hidden">
-               <img src="/images/family-3.jpg" className="w-full h-32 object-cover" alt="Family Moment" />
+               <img src="/images/family-3.jpeg" className="w-full h-32 object-cover" alt="Family Moment" />
             </div>
 
             {/* Example Family Photo 4 (Polaroid style) */}
             <div className="w-[70%] md:w-[40%] lg:w-[30%] bg-white p-3 pb-12 rounded-sm shadow-2xl rotate-[1deg] hover:scale-105 transition-all">
-              <img src="/images/family-4.jpg" className="w-full" alt="Family Moment" />
+              <img src="/images/family-4.jpeg" className="w-full" alt="Family Moment" />
               <p className="font-myanmar text-slate-800 text-center mt-4 font-bold">Happy Thadingyut!</p>
             </div>
           </div>

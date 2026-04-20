@@ -321,7 +321,7 @@ const Program = () => {
 
                 {/* APPLY NOW Button */}
                 <div className="mt-8 lg:-mt-20 lg:ml-150 flex justify-center lg:justify-start">
-                  <a href="https://form.jotform.com/232234500679050" target="_blank" rel="noopener noreferrer" className="bg-white text-black px-7 lg:px-5 py-2 lg:py-4 rounded-full text-xl lg:text-xl font-black uppercase shadow-2xl transition-transform active:scale-95 cursor-pointer inline-block text-center">APPLY NOW</a>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeMmA0kaOZcewFc6CrFiPwdTIYyp-3XLqamXuce21WLUyGiSA/viewform?embedded=true" target="_blank" rel="noopener noreferrer" className="bg-white text-black px-7 lg:px-5 py-2 lg:py-4 rounded-full text-xl lg:text-xl font-black uppercase shadow-2xl transition-transform active:scale-95 cursor-pointer inline-block text-center">APPLY NOW</a>
                 </div>
 
             </div>

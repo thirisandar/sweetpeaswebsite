@@ -131,15 +131,29 @@ import { Link } from 'react-router-dom';
 // because these are now coming in as props from your Parent (Home/App)
 const Navbar = ({ isTransparent, showForm, setShowForm }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isFormLoading, setIsFormLoading] = useState(false);
 
+  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeMmA0kaOZcewFc6CrFiPwdTIYyp-3XLqamXuce21WLUyGiSA/viewform?embedded=true";
+   
   // This function now uses the 'setShowForm' prop passed from the parent
   const handleApplyClick = () => {
-    setShowForm(true); // Triggers the global state
-    setIsOpen(false);  // Closes the mobile drawer if it's open
+    setIsFormLoading(true);
+    const newWindow = window.open(GOOGLE_FORM_URL, '_blank', 'noopener,noreferrer');
+
+    if (newWindow) {
+      setTimeout(() => {
+        setIsFormLoading(false);
+      }, 2000); // Spinner shows for 2 seconds
+    } 
+    
+    setIsOpen(false);
   };
 
   return (
     <>
+
+     
+
       <nav className={`fixed top-0 left-0 w-full z-[100] flex items-center justify-between px-6 lg:px-16 py-1 lg:py-3 transition-all ${isTransparent && !isOpen ? 'bg-transparent' : 'bg-white shadow-md'}`}>
         
         {/* Logo */}
@@ -157,9 +171,9 @@ const Navbar = ({ isTransparent, showForm, setShowForm }) => {
 
         {/* Action Area */}
         <div className="flex items-center space-x-4 relative z-[110]">
-            <a href="https://form.jotform.com/232234500679050" target="_blank" rel="noopener noreferrer" className="hidden sm:block bg-white px-6 lg:px-8 py-2 lg:py-3 rounded-full shadow-xl font-black text-black hover:scale-105 transition cursor-pointer border border-gray-100 text-center">
-              APPLY NOW
-            </a>
+            <button onClick={handleApplyClick} className="hidden sm:block bg-white px-6 lg:px-8 py-2 lg:py-3 rounded-full shadow-xl font-black text-black hover:scale-105 transition cursor-pointer border border-gray-100 text-center">
+                APPLY NOW
+            </button>
 
           {/* Hamburger Toggle */}
           <button 
@@ -193,7 +207,7 @@ const Navbar = ({ isTransparent, showForm, setShowForm }) => {
       </nav>
 
       {/* --- JOTFORM MODAL --- */}
-      {showForm && (
+      {/* {showForm && (
         <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
           <div className="relative w-full max-w-4xl bg-white rounded-[30px] shadow-2xl overflow-hidden max-h-[90vh] flex flex-col">
             
@@ -204,12 +218,14 @@ const Navbar = ({ isTransparent, showForm, setShowForm }) => {
               ✕
             </button>
 
-            <div className="overflow-y-auto p-6 pt-12">
-              <JotFormEmbed />
+            <div className="w-full h-full">
+              <iframe src={GOOGLE_FORM_URL} className="w-full h-full" frameBorder="0" marginHeight="0" marginWidth="0">
+                Loading…
+              </iframe>
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </>
   );
 };

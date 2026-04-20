@@ -4,12 +4,12 @@ import Footer from "../components/Footer";
 
 const Faq = () => {
   const activities = [
-    { src: "/images/logo.jpg", alt: "Child in chef costume" },
-    { src: "/images/logo.jpg", alt: "Child in orange costume" },
-    { src: "/images/logo.jpg", alt: "Child in pear costume" },
-    { src: "/images/logo.jpg", alt: "Child in durian costume" },
-    { src: "/images/logo.jpg", alt: "Child in penguin costume" },
-    { src: "/images/logo.jpg", alt: "Child in strawberry costume" },
+    { src: "/images/faq1.jpeg", alt: "Child in chef costume" },
+    { src: "/images/faq2.jpeg", alt: "Child in orange costume" },
+    { src: "/images/faq3.jpeg", alt: "Child in pear costume" },
+    { src: "/images/faq4.jpeg", alt: "Child in durian costume" },
+    { src: "/images/faq5.jpeg", alt: "Child in penguin costume" },
+    { src: "/images/faq6.jpeg", alt: "Child in strawberry costume" },
   ];
 
   const [openIndex, setOpenIndex] = useState(0);
@@ -85,7 +85,7 @@ const Faq = () => {
               Have questions? We have answers. Explore our frequently asked questions to learn more about our Montessori approach and community.
             </p>
 
-            <a href="https://form.jotform.com/232234500679050" target="_blank" rel="noopener noreferrer" className="relative inline-block mt-10 bg-[#81DDFB] border-4 border-white px-10 py-3 rounded-full text-2xl text-white font-black shadow-xl hover:bg-[#F1808F] transition-all z-50 cursor-pointer text-center">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeMmA0kaOZcewFc6CrFiPwdTIYyp-3XLqamXuce21WLUyGiSA/viewform?embedded=true" target="_blank" rel="noopener noreferrer" className="relative inline-block mt-10 bg-[#81DDFB] border-4 border-white px-10 py-3 rounded-full text-2xl text-white font-black shadow-xl hover:bg-[#F1808F] transition-all z-50 cursor-pointer text-center">
               Join
             </a>
           </div>
@@ -93,7 +93,7 @@ const Faq = () => {
           {/* Right Side: Hero Image */}
           <div className="w-full lg:w-1/2 relative flex justify-end items-end">
             <img 
-              src="/images/headerimg.png" 
+              src="/images/faqbg.jpeg" 
               alt="Children with school supplies" 
               className="w-full max-w-2xl lg:max-w-4xl object-contain"
             />
